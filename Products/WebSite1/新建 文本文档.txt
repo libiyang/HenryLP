@@ -1,0 +1,23 @@
+CREATE TABLE [dbo].[Products](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[HuoHao] [nvarchar](30) COLLATE Chinese_PRC_CI_AS NOT NULL CONSTRAINT [DF_Products_HuoHao]  DEFAULT (''),
+	[LeiBei] [nvarchar](30) COLLATE Chinese_PRC_CI_AS NOT NULL CONSTRAINT [DF_Products_LeiBei]  DEFAULT (''),
+	[Agent] [nvarchar](20) COLLATE Chinese_PRC_CI_AS NOT NULL CONSTRAINT [DF_Products_Agent]  DEFAULT (''),
+	[PriceFactory] [decimal](18, 2) NOT NULL,
+	[PriceSell] [decimal](18, 2) NOT NULL,
+	[AmountKc] [int] NOT NULL,
+	[AmountOut] [int] NOT NULL,
+	[Size] [nvarchar](100) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[Remark] [nvarchar](250) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[UpdateOn] [datetime] NOT NULL CONSTRAINT [DF_Products_UpdateOn]  DEFAULT (getdate()),
+	[Pic] [image] NULL,
+	[Pic1] [image] NULL,
+	[Pic2] [image] NULL,
+	[Pic3] [image] NULL,
+	[Pic4] [image] NULL,
+	[Pic5] [image] NULL,
+	[Pic6] [image] NULL,
+	[Pic7] [image] NULL,
+	[Pic8] [image] NULL,
+	[Pic9] [image] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
